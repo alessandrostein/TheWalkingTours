@@ -15,4 +15,33 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-console.log('Hello World from Webpacker')
+var Turbolinks = require("turbolinks");
+Turbolinks.start();
+
+import Rails from "rails-ujs";
+Rails.start();
+
+import {
+  Application
+} from "stimulus";
+import {
+  definitionsFromContext
+} from "stimulus/webpack-helpers";
+
+const application = Application.start();
+const context = require.context("controllers", true, /.js$/);
+application.load(definitionsFromContext(context));
+
+// Utility function to require all files in a directory...
+function requireAll(r) {
+  r.keys().forEach(r);
+}
+
+// Require everything in our modules directory
+requireAll(require.context("modules/", true, /\.js$/));
+
+// Add images to the manifest
+requireAll(require.context("images/", true, /\.(svg|png)$/));
+
+// Import our app CSS
+import "css/application";
