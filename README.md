@@ -44,7 +44,7 @@ $ rails server
 
  **Alessandro Stein** - [GitHub](https://github.com/alessandrostein)
 
-See also the list of [contributors](https://github.com/alessandrostein/TheWalkingTours/graphs/contributors/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/alessandrostein/TheWalkingTours/graphs/contributors/) who participated in this project.
 
 ## License
 
