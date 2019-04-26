@@ -1,0 +1,15 @@
+<%= content_for :body do %>
+  <section class='hero is-fullheight is-bold'>
+    <div class='hero-body'>
+      <div class='container'>
+        <div class='columns is-vcentered is-centered'>
+          <div class='column is-half'>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>
+
+<%= render file: 'layouts/base' %>
