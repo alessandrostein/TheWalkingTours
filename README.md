@@ -1,24 +1,51 @@
-# README
+## The Walking Tours
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+These instructions will get you a copy of The Walking Tours up and running on your local machine for development and testing purposes. 
 
-Things you may want to cover:
+### System Requirements
 
-* Ruby version
+Below is a list of software and its versions that are needed to setup The Walking Tours locally. The links will direct you to installation of named software. If you are working with a brand new computer follow [this guide](http://installrails.com/) to get other technologies configured
 
-* System dependencies
+* [Ruby](https://www.ruby-lang.org/en/documentation/installation/) - v2.6.2
+* [Ruby on Rails](http://guides.rubyonrails.org/getting_started.html) - Rails v5.2.3
+* [PostgreSQL](https://www.postgresql.org/download/) - 10 +
+* [Yarn](https://yarnpkg.com/en/docs/install) - Yarn v0.27.5
 
-* Configuration
+### Installing
 
-* Database creation
+After all system requirment versions are set, follow steps to install The Walking Tours on your computer
 
-* Database initialization
+First clone this repository to your project directory:
 
-* How to run the test suite
+```sh
+$ git clone git@github.com:alessandrostein/TheWalkingTours.git
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Then change into The Walking Tours directory and install gems from Gemfile and packages from package.json
 
-* Deployment instructions
+```sh
+cd TheWalkingTours
+bundle install
+yarn install
+```
 
-* ...
+Create and setup your database:
+
+```sh
+$ rails db:setup
+```
+
+Start rails server and navigate to localhost:3000.
+
+```
+$ ./bin/server
+```
+## Author
+
+ **Alessandro Stein** - [GitHub](https://github.com/alessandrostein)
+
+See also the list of [contributors](https://github.com/alessandrostein/TheWalkingTours/graphs/contributors/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License
