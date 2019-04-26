@@ -32,13 +32,13 @@ yarn install
 Create and setup your database:
 
 ```sh
-$ rails db:setup
+$ rails db:setup & rails db:migrate
 ```
 
 Start rails server and navigate to localhost:3000.
 
 ```
-$ ./bin/server
+$ rails server
 ```
 ## Author
 
